@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Salle Business Match</title>
+  <link href="dist/output.css" rel="stylesheet">
+      <!-- AOS - Librería para animaciones al hacer scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <!-- Alpine.js - Para interactividad del menú móvil -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+   <style>
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-250px * 7)); } /* 250px por imagen, 7 imágenes */
+        }
+        .animate-scroll {
+            animation: scroll 40s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="container mx-auto px-6 py-16">
+
+    <!-- Integrantes -->
+    <section class="mb-16">
+    <h1 class="text-4xl md:text-5xl font-bold text-center mb-8" data-aos="fade-up">Nuestro Equipo</h1>
+    
+    <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center" data-aos="zoom-in">
+            <img src="/assets/images/miembro1.jpg" alt="Rayane" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+            <h4 class="font-semibold text-lg">Rayane</h4>
+            <p class="text-gray-600 text-sm">Estudiante DAM</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center" data-aos="zoom-in" data-aos-delay="100">
+            <img src="/assets/images/miembro2.jpg" alt="Miguel" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+            <h4 class="font-semibold text-lg">Miguel</h4>
+            <p class="text-gray-600 text-sm">Estudiante DAM</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center" data-aos="zoom-in" data-aos-delay="200">
+            <img src="/assets/images/miembro3.jpg" alt="Víctor" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover">
+            <h4 class="font-semibold text-lg">Víctor</h4>
+            <p class="text-gray-600 text-sm">Estudiante DAM</p>
+        </div>       
+    </div>
+
+    </section>
+
+    <!-- Ubicación -->
+    <section class="mb-16 max-w-4xl mx-auto p-8 border border-gray-200 rounded-xl shadow-lg bg-white" data-aos="fade-up">
+    <p class="text-center text-lg text-gray-700 mb-8 font-semibold">Nos encontramos en La Salle Santo Ángel, en Zaragoza:</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        
+        <div class="overflow-hidden rounded-lg shadow-md">
+            <img src="../assets/Images/FotoSalle.png" alt="Edificio La Salle Santo Ángel" class="w-full h-auto object-cover">
+        </div>
+
+        
+        <div class="aspect-video overflow-hidden rounded-lg shadow-md">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2982.1016145203757!2d-0.9313028238923873!3d41.63193497126992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd596ae4350cb88f%3A0x5589aee9027c6a06!2sLa%20Salle%20Santo%20%C3%81ngel!5e0!3m2!1ses!2ses!4v1761212846739!5m2!1ses!2ses%22%20width=%22600%22%20height=%22450%22%20style=%22border:0;%22%20allowfullscreen=%22%22%20loading=%22lazy%22%20referrerpolicy=%22no-referrer-when-downgrade"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+    
+    <div class="text-center space-y-2">
+        <p class="text-gray-700 text-lg">C. de Tomás Anzano, 1, Casablanca</p>
+        <p class="text-gray-700 text-lg">50012 Zaragoza</p>
+        <p class="text-gray-700 text-lg">Teléfono: 976 75 37 18</p>
+        
+        <a href="https://maps.app.goo.gl/oBMXTpmkEqX1WjRK8" target="_blank" class="inline-block bg-red-500 text-white px-8 py-3 rounded-full hover:bg-red-600 transition-colors duration-300 mt-4 text-lg font-semibold">
+            Ver en Google Maps
+        </a>
+    </div>
+    
+    </section>
+
+    <!-- Botón Página Principal -->
+    <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="300">
+        <a href="index.html" class="inline-flex items-center bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition-colors duration-300 font-semibold shadow-md">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l-3-3m0 0l3-3m-3 3h8m-11 5h14a2 2 0 002-2v-4a2 2 0 00-2-2H3a2 2 0 00-2 2v4a2 2 0 002 2z"></path>
+            </svg>
+            Volver a la Página Principal
+        </a>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-white border-t mt-12">
+    <div class="container mx-auto py-8 px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-600 text-sm mb-4 md:mb-0">&copy; 2026 La Salle FP Online. Creado por Rayane Miguel y Victor</p>
+            <div class="flex items-center space-x-6">
+                <a href="nosotros.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Sobre Nosotros</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Política de Privacidad</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+      duration: 800,
+      once: true,
+  });
+</script>
+
+</body>
+</html>
