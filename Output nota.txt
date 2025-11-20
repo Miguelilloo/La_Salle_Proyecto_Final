@@ -1,0 +1,4 @@
+npx tailwindcss -i ./css/style.css -o ./dist/output.css --watch
+
+
+comando para crear OUTPUT y Revisarlo
