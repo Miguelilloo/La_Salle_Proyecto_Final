@@ -4,43 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La Salle Business Match</title>
+  
   <link href="dist/output.css" rel="stylesheet">
-      <!-- AOS - Librería para animaciones al hacer scroll -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-      <!-- Alpine.js - Para interactividad del menú móvil -->
+    
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<!-- CABECERA -->
 <body class="text-gray-800 font-sans">
-<!-- Usamos Alpine.js para controlar el estado del menú móvil (x-data, @click, x-show) -->
+
 <header x-data="{ open: false }" 
-  class="sticky top-0 z-50  border-b bg-slate-50  shadow-md transition-all duration-500">
-  <div class="container mx-auto flex items-center justify-between py-1 px-6">
+  class="fixed top-4 left-0 right-0 z-50 mx-auto w-[95%] max-w-7xl bg-white/60 backdrop-blur-xl border border-white/40 shadow-2xl 
+  rounded-full transition-all duration-500">
+         <div class="flex items-center justify-between py-2 px-8">
 
         <div class="flex items-center space-x-4">
-        <a href="index.html">
-        <img src="assets/Images/LOGO_V2.png" alt="Logo LSBM" class="h-24 w-auto">
-        </a>
+            <a href="index.html">
+                <img src="assets/Images/LOGO_V2.png" alt="Logo LSBM" class="h-20 w-auto object-contain -translate-y-2">
+            </a>
         </div>
         
-        <!-- Navegación para escritorio -->
-        <nav class="hidden md:flex space-x-8">
-            <a href="#programa" class="text-slate-800 hover:text-yellow-400 transition-colors duration-300">Programa</a>
-            <a href="#descargas" class="text-slate-800 hover:text-yellow-400 transition-colors duration-300">Descargas</a>
-            <a href="#patrocinadores" class="text-slate-800 hover:text-yellow-400 transition-colors duration-300">Patrocinadores</a>
-            <a href="nosotros.html" class="text-slate-800 hover:text-yellow-400 transition-colors duration-300">Nosotros</a>
-        </nav>
-        
-        <a href="login.html" class="hidden md:block bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-transform duration-300 hover:scale-105 shadow-lg">
+        <nav class="hidden md:flex space-x-8 font-medium text-lg">
+            <a href="#programa" class="text-slate-800 hover:text-yellow-600 transition-colors duration-300">Programa</a>
+            <a href="#descargas" class="text-slate-800 hover:text-yellow-600 transition-colors duration-300">Descargas</a>
+            <a href="#patrocinadores" class="text-slate-800 hover:text-yellow-600 transition-colors duration-300">Patrocinadores</a>
+            <a href="nosotros.html" class="text-slate-800 hover:text-yellow-600 transition-colors duration-300">Nosotros</a>
+        </nav> 
+        <a href="login.html" class="hidden md:block bg-blue-900 text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-transform duration-300 hover:scale-105 shadow-lg font-semibold text-sm">
             Iniciar Sesion
         </a>
 
-        <!-- Botón del menú móvil -->
         <div class="md:hidden">
             <button @click="open = !open" class="text-gray-800 focus:outline-none" aria-label="Abrir menú de navegación">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -49,34 +43,31 @@
             </button>
         </div>
     </div>
-
-    <!-- Menú desplegable para móvil -->
-    <div x-show="open" @click.away="open = false" class="md:hidden bg-white border-t"
+    <div x-show="open" @click.away="open = false" 
+         class="md:hidden absolute top-full left-0 right-0 mt-2 mx-4 bg-white/95 backdrop-blur-xl rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
          x-transition:enter="transition ease-out duration-200"
          x-transition:enter-start="opacity-0 transform -translate-y-2"
          x-transition:enter-end="opacity-100 transform translate-y-0"
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 transform translate-y-0"
          x-transition:leave-end="opacity-0 transform -translate-y-2">
-        <a href="#programa" class="block py-2 px-6 text-sm hover:bg-white-100 text-gray-900">Programa</a>
-        <a href="#descargas" class="block py-2 px-6 text-sm hover:bg-white-100 text-gray-900">Descargas</a>
-        <a href="#patrocinadores" class="block py-2 px-6 text-sm hover:bg-white-100 text-gray-900">Patrocinadores</a>
-        <a href="nosotros.html" class="block py-2 px-6 text-sm hover:bg-white-100 text-gray-900">Nosotros</a>
-        <a href="login.html" class="block py-3 px-6 text-sm bg-blue-50 text-blue-700 font-semibold">Iniciar Sesion</a>
+        <a href="#programa" class="block py-3 px-6 text-sm hover:bg-gray-50 text-gray-900 font-medium">Programa</a>
+        <a href="#descargas" class="block py-3 px-6 text-sm hover:bg-gray-50 text-gray-900 font-medium">Descargas</a>
+        <a href="#patrocinadores" class="block py-3 px-6 text-sm hover:bg-gray-50 text-gray-900 font-medium">Patrocinadores</a>
+        <a href="nosotros.html" class="block py-3 px-6 text-sm hover:bg-gray-50 text-gray-900 font-medium">Nosotros</a>
+        <div class="p-4">
+            <a href="login.html" class="block text-center py-3 px-6 text-sm bg-slate-900 text-white rounded-xl font-semibold">Iniciar Sesion</a>
+        </div>
     </div>
 </header>
-
-<main>
-    <!-- SECCIÓN CONCURSO -->
+<main class="pt-36 md:pt-40"> 
+    
     <section id="programa" class="container mx-auto py-16 px-6 text-center">
-        <!-- 'data-aos' activa la animación al hacer scroll -->
         <h1 class="text-3xl md:text-5xl font-bold mb-4" data-aos="fade-up">Concurso de Spot Publicitario 2025</h1>
         <p class="text-lg text-white-600 mb-8" data-aos="fade-up" data-aos-delay="100">¡Felicidades al equipo ganador de la edición anterior: <span class="font-semibold text-blue-600">EVENTURA!</span></p>
-        
+
     <div class="max-w-4xl mx-auto mb-12" data-aos="zoom-in" data-aos-delay="200">
-    <!-- Contenedor que establece la relación de aspecto 16:9 -->
     <div class="aspect-video overflow-hidden rounded-lg shadow-2xl">
-        <!-- El iframe ahora ocupa el 100% del contenedor padre -->
         <iframe
             class="w-full h-full"
             src="https://www.youtube.com/embed/jORxkhINil4"
@@ -87,15 +78,12 @@
         ></iframe>
     </div>
 </div>
-
-    <!-- DESCARGAS -->
     <section id="descargas" class="bg-white-100 py-20">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Recursos y Documentos</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- Tarjeta de Descarga 1 -->
-                <a href="../assets/docs/programa.pdf" class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+
+                <a href="assets/docs/Programa_LSBM_2025.pdf" class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
                     <svg class="h-10 w-10 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7v3m0 0v3m0-3h3m-3 0H9"></path></svg>
                     <h3 class="font-bold text-xl mb-2 text-gray-900">Programa de la Feria</h3>
                     <p class="text-gray-600">
@@ -103,9 +91,7 @@
                         <div class="text-blue-600 font-semibold mt-1">Descargar PDF →</div>
                     </p>
                 </a>
-                
-                <!-- Tarjeta de Descarga 2 -->
-                <a href="../assets/docs/bases_concurso.pdf" class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <a href="assets/docs/BasesConcurso.pdf" class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                     <svg class="h-10 w-10 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                     <h3 class="font-bold text-xl mb-2 text-gray-900">Bases del Concurso</h3>
                     <p class="text-gray-600">
@@ -113,9 +99,7 @@
                         <div class="text-blue-600 font-semibold mt-1">Descargar PDF →</div>
                     </p>
                 </a>
-
-                <!-- Tarjeta de Descarga 3 -->
-                <a href="../assets/docs/guia_participar.pdf" class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                <a href="assets/docs/LSBM2025GuiaFeria.pdf" class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
                     <svg class="h-10 w-10 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V7a2 2 0 012-2h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 01.293.707V8z"></path></svg>
                     <h3 class="font-bold text-xl mb-2 text-gray-900">Guía para Participar</h3>
                     <p class="text-gray-600">
@@ -123,27 +107,22 @@
                         <div class="text-blue-600 font-semibold mt-1">Descargar PDF →</div>
                     </p>
                 </a>
-
             </div>
         </div>
     </section>
 
-    <!-- PATROCINADORES -->
     <section id="patrocinadores" class="py-20">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Nuestros Patrocinadores y Colaboradores</h2>
             <p class="text-white mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Agradecemos el apoyo de las empresas que hacen posible este evento.</p>
             
-            <!-- Carrusel infinito de logos -->
             <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
                 <div class="flex animate-scroll">
-                    <!-- Logos duplicados para el efecto infinito -->
                     <div class="flex w-max items-center">
                         <img src="assets/Images/cocacola.png" alt="Patrocinador 1" class="h-20 mx-10">
                         <img src="assets/Images/cocacola.png" alt="Patrocinador 2" class="h-20 mx-10">
                         <img src="assets/Images/cocacola.png" alt="Patrocinador 3" class="h-20 mx-10">
-                        <!-- Añade más patrocinadores si es necesario -->
-                    </div>
+                        </div>
                     <div class="flex w-max items-center" aria-hidden="true">
                         <img src="assets/Images/cocacola.png" alt="Patrocinador 1" class="h-20 mx-10">
                         <img src="assets/Images/cocacola.png" alt="Patrocinador 2" class="h-20 mx-10">
@@ -156,7 +135,6 @@
 
 </main>
 
-<!-- FOOTER -->
 <footer class="bg-white border-t mt-12">
     <div class="container mx-auto py-8 px-6">
         <div class="flex flex-col md:flex-row justify-between items-center">
@@ -183,7 +161,6 @@
     </div>
 </footer>
 
-<!-- Script para inicializar AOS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
