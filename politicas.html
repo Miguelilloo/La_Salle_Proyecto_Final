@@ -11,16 +11,49 @@
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-   <style>
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-250px * 7)); } /* 250px por imagen, 7 imágenes */
-        }
-        .animate-scroll {
-            animation: scroll 40s linear infinite;
-        }
-    </style>
+ 
 </head>
 <body>
+<section class="container mx-auto py-16 px-6 max-w-4xl">
+    <h1 class="text-4xl font-bold text-gray-800 mb-10 text-center">Política de Privacidad</h1>
     
+    <div class="space-y-4">
+
+        <details class="group bg-white rounded-xl shadow-sm border border-gray-100">
+            <summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-gray-800">
+                1. ¿Quién es el responsable del tratamiento de datos?
+                <span class="transition-transform duration-300 group-open:rotate-180 text-blue-600">▼</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600">
+                <p>El responsable del tratamiento es <strong>La Salle FP</strong>. Puede contactar con el Delegado de Protección de Datos a través del correo electrónico: <a href="#" class="text-blue-600">info@lasalle.es</a>.</p>
+            </div>
+        </details>
+
+        <details class="group bg-white rounded-xl shadow-sm border border-gray-100">
+            <summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-gray-800">
+                2. ¿Con qué finalidad tratamos los datos?
+                <span class="transition-transform duration-300 group-open:rotate-180 text-blue-600">▼</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600">
+                <p>En La Salle tratamos la información que nos facilitan las personas interesadas con el fin de gestionar la participación en el concurso La Salle Business Match, así como el envío de comunicaciones informativas sobre el evento.</p>
+                <br></br>
+                <li>Gestión de inscripciones.</li>
+                <li>Comunicación de ganadores.</li>
+                <li>Envío de newsletters relacionadas.</li>
+            </div>
+        </details>
+
+        <details class="group bg-white rounded-xl shadow-sm border border-gray-100">
+            <summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-gray-800">
+                3. Legitimación
+                <span class="transition-transform duration-300 group-open:rotate-180 text-blue-600">▼</span>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600">
+                <p>La base legal para el tratamiento de sus datos es el consentimiento del interesado, que se solicita al rellenar el formulario de inscripción o al aceptar las bases del concurso.</p>
+            </div>
+        </details>
+
+    </div>
+</section>
 </body>
+</html>
