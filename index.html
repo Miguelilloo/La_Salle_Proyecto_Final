@@ -28,7 +28,7 @@
         <nav class="hidden md:flex space-x-8 font-medium text-lg">
             <a href="#programa" class="text-slate-800 hover:text-yellow-600 transition-colors duration-300">Programa</a>
             <a href="#descargas" class="text-slate-800 hover:text-yellow-600 transition-colors duration-300">Descargas</a>
-            <a href="#patrocinadores" class="text-slate-800 hover:text-yellow-600 transition-colors duration-300">Patrocinadores</a>
+            <a href="empresas.html" class="text-slate-800 hover:text-yellow-600 transition-colors duration-300">Empresas</a>
             <a href="nosotros.html" class="text-slate-800 hover:text-yellow-600 transition-colors duration-300">Nosotros</a>
         </nav> 
         <a href="login.html" class="hidden md:block bg-blue-900 text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-transform duration-300 hover:scale-105 shadow-lg font-semibold text-sm">
@@ -53,7 +53,7 @@
          x-transition:leave-end="opacity-0 transform -translate-y-2">
         <a href="#programa" class="block py-3 px-6 text-sm hover:bg-gray-50 text-gray-900 font-medium">Programa</a>
         <a href="#descargas" class="block py-3 px-6 text-sm hover:bg-gray-50 text-gray-900 font-medium">Descargas</a>
-        <a href="#patrocinadores" class="block py-3 px-6 text-sm hover:bg-gray-50 text-gray-900 font-medium">Patrocinadores</a>
+        <a href="empresas.html" class="block py-3 px-6 text-sm hover:bg-gray-50 text-gray-900 font-medium">Empresas</a>
         <a href="nosotros.html" class="block py-3 px-6 text-sm hover:bg-gray-50 text-gray-900 font-medium">Nosotros</a>
         <div class="p-4">
             <a href="login.html" class="block text-center py-3 px-6 text-sm bg-slate-900 text-white rounded-xl font-semibold">Iniciar Sesion</a>
@@ -111,9 +111,9 @@
         </div>
     </section>
 
-    <section id="patrocinadores" class="py-20">
+    <section id="empresas" class="py-20">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Nuestros Patrocinadores y Colaboradores</h2>
+            <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Nuestras Empresas y Colaboradores</h2>
             <p class="text-white mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Agradecemos el apoyo de las empresas que hacen posible este evento.</p>
             
             <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
@@ -170,18 +170,23 @@
 </script>
    <style>
         @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-250px * 7)); } /* 250px por imagen, 7 imágenes */
+            0% { transform: translateX(0); 
+            }
+            100% { transform: translateX(-50%); } /* 250px por imagen, 7 imágenes */
         }
         .animate-scroll {
-            animation: scroll 40s linear infinite;
+            width: max-content; 
+            display: flex;
+            animation: scroll 20s linear infinite;
         }
+
         body {
         background: 
       linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* capa oscura semitransparente */
       url('assets/Images/fondo_pagina_3.png') no-repeat center center fixed;
       background-size: cover;
       color: #f5f5f5; /* texto claro para contraste */
+      background-color: #7a7f8b; /*por si falla el fondo de la pagina*/
     }
     </style>
 </body>

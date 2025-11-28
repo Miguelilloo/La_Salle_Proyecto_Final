@@ -18,14 +18,25 @@
       <input type="file" name="logo" required
         class="w-full border border-gray-300 rounded-lg p-2">
 
-      <!-- Descripción -->
-      <label class="block text-sm font-semibold">Descripción de productos o servicios</label>
-      <textarea name="descripcion" rows="3"
-        class="w-full border border-gray-300 rounded-lg p-2"></textarea>
+      <!-- Nombre -->
+      <label class="block text-sm font-semibold">Nombre de la empresa*</label>
+      <input type="text" name="entidad" value="" required
+        class="w-full border border-gray-300 rounded-lg p-2">
+        
+        
+      <!-- Email -->
+      <label class="block text-sm font-semibold">Email*</label>
+      <input type="email" name="email" value="" required
+        class="w-full border border-gray-300 rounded-lg p-2">
+      
+        <!-- Contraseña -->
+      <label class="block text-sm font-semibold">Contraseña*</label>
+      <input type="password" name="contra" value="" required
+        class="w-full border border-gray-300 rounded-lg p-2">
 
-      <!-- URL Meet -->
-      <label class="block text-sm font-semibold">URL Meet*</label>
-      <input type="url" name="meet" required
+        <!-- Repetir Contraseña -->
+      <label class="block text-sm font-semibold">Repite Contraseña*</label>
+      <input type="password" name="contra" value="" required
         class="w-full border border-gray-300 rounded-lg p-2">
 
       <!-- Horario -->
@@ -41,11 +52,21 @@
         <input type="time" name="tarde_fin" required class="w-1/2 border rounded-lg p-2">
       </div>
 
-      <!-- Entidad -->
-      <label class="block text-sm font-semibold">Entidad*</label>
-      <input type="text" name="entidad" value="LA SALLE FP ONLINE" required
+      <!-- Descripción -->
+      <label class="block text-sm font-semibold">Descripción de productos o servicios</label>
+      <textarea name="descripcion" rows="3"
+      class="w-full border border-gray-300 rounded-lg p-2"></textarea>
+
+      <!-- URL Meet -->
+      <label class="block text-sm font-semibold">URL Meet*</label>
+      <input type="url" name="meet" required
         class="w-full border border-gray-300 rounded-lg p-2">
 
+        <!-- Enlace Web -->
+      <label class="block text-sm font-semibold">Enlace Web*</label>
+      <input type="url" name="meet" required
+        class="w-full border border-gray-300 rounded-lg p-2">
+        
       <!-- Botón -->
       <button type="submit"
         class="w-full bg-blue-600 py-3 rounded-lg font-semibold text-white hover:bg-blue-700 transition">
@@ -53,5 +74,16 @@
       </button>
     </form>
   </div>
+  <style>
+    body {
+        background: 
+            /* Capa oscura al 40% para que se lea el texto blanco */
+            linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            /* La imagen de fondo fija */
+            url('assets/Images/fondo_pagina_3.png') no-repeat center center fixed;
+        background-size: cover; /* Ajusta la imagen a toda la pantalla */
+        background-color: #0f172a; /* Color de seguridad por si falla la imagen */
+    }
+</style>
 </body>
 </html>
