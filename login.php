@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - LSBM</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="relative flex items-center justify-center min-h-screen text-white overflow-hidden">
+
+  <!-- VIDEO DE FONDO -->
+  <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="assets/Video/stars_motion_salle2.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
+  </video>
+
+  <!-- CAPA OSCURA (para mejorar legibilidad del formulario) -->
+  <div class="absolute inset-0 bg-black/60 z-10"></div>
+
+  <!-- CONTENEDOR DEL LOGIN -->
+  <div class="relative z-20 bg-gray-800/90 backdrop-blur-md p-10 rounded-2xl shadow-2xl w-full max-w-md text-center">
+    <!-- Logo -->
+    <img src="assets/Images/LOGO_V2.png" alt="Logo" class="mx-auto h-14 mb-6">
+
+    <h1 class="text-2xl font-bold mb-2">Hola, bienvenido a La Salle Business Match</h1>
+    <p class="text-sm text-gray-300 mb-6">
+      Solo se permite el acceso con email validado por la organización.
+    </p>
+    
+    <<form action="login_datos.php" method="POST" class="space-y-5">>
+      <!-- Email -->
+      <input type="email" name="email" placeholder="Correo electrónico"
+        class="w-full px-4 py-3 rounded-lg bg-gray-700/80 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+      <!-- Contraseña -->
+      <input type="password" name="password" placeholder="Contraseña"
+        class="w-full px-4 py-3 rounded-lg bg-gray-700/80 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+      <!-- Botón -->
+      <button type="submit"
+        class="w-full bg-blue-600 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+        ENVIAR
+      </button>
+    </form>
+
+    <!-- Enlaces -->
+    <div class="mt-6 text-sm text-gray-300">
+      <p>¿No tienes cuenta? 
+        <a href="registro.html" class="text-blue-400 hover:underline">Regístrate</a>
+      </p>
+      <p class="mt-2">¿Problemas? Contacta con tu profesor</p>
+    </div>
+  </div>
+
+</body>
+</html>
